@@ -1,5 +1,5 @@
 {
-  "name": "react-therometer",
+  "name": "react-thermometer",
   "version": "0.0.1",
   "description": "a thermometer gauge component for react",
   "main": "dist/index.js",
