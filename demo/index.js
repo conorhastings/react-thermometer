@@ -29,7 +29,11 @@ class Demo extends Component {
 						<div key={key} style={{marginBottom: 10}}>
 							<label>{key}</label><br />
 							<input 
-								onChange={(e) => this.setState({[key]: e.target.value})} 
+								onChange={(e) => {
+										const newState = key === "fillColor" || key === "backgroundColor" ? e.target.value :
+											parseInt(e.target.value);
+										this.setState({[key]: newState});
+								}} 
 								value={this.state[key]}
 							/>
 					</div>

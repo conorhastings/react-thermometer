@@ -78,7 +78,8 @@ var Demo = (function (_Component) {
 							_react2['default'].createElement('br', null),
 							_react2['default'].createElement('input', {
 								onChange: function (e) {
-									return _this.setState(_defineProperty({}, key, e.target.value));
+									var newState = key === "fillColor" || key === "backgroundColor" ? e.target.value : parseInt(e.target.value);
+									_this.setState(_defineProperty({}, key, newState));
 								},
 								value: _this.state[key]
 							})
@@ -127,6 +128,7 @@ var Thermometer = function Thermometer(_ref) {
   var height = _ref.height;
   var width = _ref.width;
 
+  console.log(typeof height);
   var totalHeight = height + width * 2.5;
   var bubbleHeight = width * 2.5;
   var unitOfMovement = totalHeight / (max - min);
