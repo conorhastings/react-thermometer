@@ -1,0 +1,49 @@
+{
+  "name": "react-therometer",
+  "version": "0.0.1",
+  "description": "a thermometer gauge component for react",
+  "main": "dist/index.js",
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "build-demo": "browserify demo/index.js -o demo/bundle.js",
+    "watch": "babel src --watch --out-dir dist",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/conorhastings/react-thermometer.git"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "react-component",
+    "javascript",
+    "chart",
+    "react-chart",
+    "thermometer",
+    "gauge"
+  ],
+  "devDependencies": {
+    "babel": "^5.8.29",
+    "babel-core": "^5.8.29",
+    "babelify": "^6.4.0",
+    "browserify": "^12.0.0",
+    "react": "^0.14.3",
+    "react-addons-test-utils": "^0.14.3",
+    "react-dom": "^0.14.3"
+  },
+  "peerDependencies": {
+    "react": ">= 0.14.0"
+  },
+  "author": "Conor Hastings",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/conorhastings/react-thermometer/issues"
+  },
+  "homepage": "https://github.com/conorhastings/react-thermometer#readme"
+}
